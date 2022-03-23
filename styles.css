@@ -5,7 +5,7 @@
 * {
     box-sizing: border-box;
     font-family: Raleway;
-    color: #777;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    background-color: rgb(190, 190, 190);
 }
 
 .content-section {
@@ -63,6 +64,7 @@ body {
 
 .shop-item {
     width: 254px;
+    min-height: 480px;
     margin: 30px;
     border: 2px solid #333;
 }
@@ -85,16 +87,11 @@ body {
 }
 
 .shop-item-details {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     padding: 5px;
 }
 
 .shop-item-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     padding-top: 3em;
     padding-bottom: 1em;
     color: #333;
@@ -129,16 +126,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .list-item-title {
     color: #333;
     margin-left: .5em;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-align: center;
 }
 
+.list-price {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.0em;
+    text-align: center;
+}
 
 .list-total {
     text-align: center;
@@ -153,8 +155,7 @@ body {
     margin-right: 20px;
 }
 
-
 .list-total-price {
     color: #333;
-    font-size: 1.1em;
+    font-size: 1.8em;
 }

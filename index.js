@@ -6,21 +6,15 @@ if (document.readyState == 'loading') {
 
 const shopItems = document.querySelector(".shop-items");
 
-const shopItemArray = [{"shopItemTitle": "Blood, Sugar", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 6.jpg"},
+const shopItemArray = [{"shopItemTitle": "Blood, Sugar", "shopItemDetails": "Maybe one of the greatest album ever", "shopItemPrice": "169:-", "shopItemImage": "Images/Album 6.jpg"},
 {"shopItemTitle": "Trans Europe", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 5.jpg"},
-{"shopItemTitle": "Random Access", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 3.jpg"},
-{"shopItemTitle": "Changes", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 4.jpg"},
-{"shopItemTitle": "Breaking Out", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 1.png"},
-{"shopItemTitle": "Superfly", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "129:-", "shopItemImage": "Images/Album 2.png"}
+{"shopItemTitle": "Random Access", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "139:-", "shopItemImage": "Images/Album 3.jpg"},
+{"shopItemTitle": "Changes", "shopItemDetails": "Probably the greatest album ever", "shopItemPrice": "119:-", "shopItemImage": "Images/Album 4.jpg"},
+{"shopItemTitle": "Breaking Out", "shopItemDetails": "Probably not the greatest album ever", "shopItemPrice": "229:-", "shopItemImage": "Images/Album 1.png"},
+{"shopItemTitle": "Superfly", "shopItemDetails": "Probably one of the greatest album ever", "shopItemPrice": "149:-", "shopItemImage": "Images/Album 2.png"}
 ];
 
-function ready() {
-    // var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    // for (var i = 0; i < removeCartItemButtons.length; i++) {
-    //     var button = removeCartItemButtons[i]
-    //     button.addEventListener('click', removeCartItem)
-    // }
-
+function ready() { 
         for (let i = 0; i < shopItemArray.length; i++) {
         const tempShopItems = shopItemArray[i];
         const info = document.createElement("shop-item")
@@ -47,8 +41,7 @@ function addToListClicked(event) {
     var button = event.target;
     var shopItem = button.parentElement.parentElement;    
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText    
     addItemToList(title, price)
     updateListTotal()
 }
